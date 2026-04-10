@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Mi Mentoría</title>
+  <title>Mi viaje de crecimiento</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -11,6 +11,7 @@
       font-family: Arial, sans-serif;
       background: #f4f1ea;
       color: #2f3e34;
+      scroll-behavior: smooth;
     }
 
     header {
@@ -20,6 +21,7 @@
       padding: 15px;
       text-align: center;
       box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      z-index: 1000;
     }
 
     nav a {
@@ -30,7 +32,7 @@
     }
 
     section {
-      padding: 100px 20px 60px;
+      padding: 120px 20px 80px;
       max-width: 900px;
       margin: auto;
     }
@@ -41,15 +43,21 @@
 
     .hero {
       text-align: center;
-      padding-top: 140px;
+      padding-top: 160px;
     }
 
     .box {
       background: #ffffff;
-      padding: 20px;
+      padding: 25px;
       margin-top: 20px;
       border-radius: 12px;
       box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+    }
+
+    .etapa {
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: #1e3f35;
     }
 
     .dafo {
@@ -83,10 +91,6 @@
       margin-bottom: 8px;
     }
 
-    strong {
-      color: #1e3f35;
-    }
-
     @media (max-width: 768px) {
       .dafo {
         grid-template-columns: 1fr;
@@ -100,50 +104,51 @@
 <header>
   <nav>
     <a href="#inicio">Inicio</a>
-    <a href="#introduccion">Introducción</a>
-    <a href="#desarrollo">Desarrollo</a>
-    <a href="#crecer">CRECER</a>
-    <a href="#proyecto">Proyecto</a>
-    <a href="#conclusion">Conclusión</a>
+    <a href="#inicio-viaje">Inicio del viaje</a>
+    <a href="#mapa">Mapa</a>
+    <a href="#herramientas">Herramientas</a>
+    <a href="#prueba">Prueba</a>
+    <a href="#final">Destino</a>
   </nav>
 </header>
 
 <!-- HOME -->
 <section id="inicio" class="hero">
-  <h1>Mi proceso de crecimiento</h1>
-  <p>Mentoría · Autoconocimiento · Mejora personal</p>
-  <a href="#introduccion" class="btn">Empezar</a>
+  <h1>Mi viaje de crecimiento</h1>
+  <p>De la duda al autoconocimiento</p>
+  <a href="#inicio-viaje" class="btn">Comenzar viaje</a>
 </section>
 
-<!-- INTRODUCCIÓN -->
-<section id="introduccion">
-  <h2>Introducción</h2>
+<!-- INTRO -->
+<section id="inicio-viaje">
+  <h2>🌱 Inicio del viaje</h2>
   <div class="box">
+    <p class="etapa">Antes de empezar...</p>
     <ul>
-      <li>Experiencia en mentoría</li>
-      <li>Aplicación en vida académica y personal</li>
-      <li>Actividades clave:
-        <ul>
-          <li>Análisis DAFO</li>
-          <li>Acciones CRECER</li>
-          <li>Descubrimiento del don</li>
-          <li>Proyecto transversal</li>
-        </ul>
-      </li>
+      <li>No analizaba mis fortalezas ni debilidades</li>
+      <li>No reflexionaba sobre mis acciones</li>
+      <li>No tenía claro cómo mejorar</li>
+    </ul>
+
+    <p class="etapa">Durante la mentoría descubrí:</p>
+    <ul>
+      <li>La importancia del autoconocimiento</li>
+      <li>Herramientas como DAFO y CRECER</li>
+      <li>La necesidad de aplicar lo aprendido</li>
     </ul>
   </div>
 </section>
 
 <!-- DESARROLLO -->
-<section id="desarrollo">
-  <h2>Desarrollo</h2>
+<section id="mapa">
+  <h2>🗺️ El mapa: conocerme a mí misma</h2>
   <div class="box">
 
+    <p class="etapa">Descubrimiento personal</p>
     <ul>
-      <li><strong>Autoconocimiento:</strong> ahora soy más consciente de mí misma</li>
-      <li>Importancia de analizar fortalezas, debilidades, oportunidades y amenazas</li>
-      <li>Perspectiva externa (otras personas ayudando en el DAFO)</li>
-      <li>Relación entre debilidades y amenazas</li>
+      <li>Mayor conciencia de mí misma</li>
+      <li>Relación entre debilidades y problemas</li>
+      <li>Importancia de la opinión de otros</li>
     </ul>
 
     <div class="dafo">
@@ -151,7 +156,6 @@
         <strong>💪 Fortalezas</strong>
         <ul>
           <li>Fuerza de voluntad</li>
-          <li>Temperamento</li>
           <li>Empatía</li>
           <li>Creatividad</li>
         </ul>
@@ -163,14 +167,13 @@
           <li>Dislexia</li>
           <li>Timidez</li>
           <li>Perfeccionismo</li>
-          <li>Autoexigencia</li>
         </ul>
       </div>
 
       <div class="card">
         <strong>🌱 Oportunidades</strong>
         <ul>
-          <li>La universidad</li>
+          <li>Universidad</li>
         </ul>
       </div>
 
@@ -178,99 +181,88 @@
         <strong>🚧 Amenazas</strong>
         <ul>
           <li>Mala gestión del tiempo</li>
-          <li>Tendencia a cerrarme emocionalmente</li>
+          <li>Dificultad para expresarme</li>
         </ul>
       </div>
     </div>
 
+    <p class="etapa">Mi don</p>
     <ul>
-      <li><strong>Don:</strong> crear cosas (manual + técnico)</li>
-      <li>Actividades: dibujar, tejer, programar, construir</li>
-      <li>Perfil tipo “artesano”: dedicación y detalle</li>
-      <li>Importancia de ayudar en equipo dando estructura</li>
-      <li>Reflexión sobre vocación → desarrollo de videojuegos</li>
-      <li>Preguntas personales: quién soy, propósito, futuro</li>
+      <li>Crear cosas (manual y técnico)</li>
+      <li>Dibujar, tejer, programar</li>
+      <li>Perfil tipo artesano</li>
+      <li>Ayudar en equipo dando forma a ideas</li>
     </ul>
 
   </div>
 </section>
 
 <!-- CRECER -->
-<section id="crecer">
-  <h2>Acciones CRECER</h2>
+<section id="herramientas">
+  <h2>🛠️ Las herramientas del viaje (CRECER)</h2>
   <div class="box">
 
     <ul>
-      <li><strong>C - Concretas:</strong> claras y específicas</li>
-      <li><strong>R - Realistas:</strong> alcanzables</li>
-      <li><strong>E - Empáticas:</strong> ayudan a otros</li>
-      <li><strong>C - Calendarizadas:</strong> con tiempo definido</li>
-      <li><strong>E - Enfocadas:</strong> importantes</li>
-      <li><strong>R - Retadoras:</strong> impulsan mejora</li>
+      <li><strong>C:</strong> Concretas</li>
+      <li><strong>R:</strong> Realistas</li>
+      <li><strong>E:</strong> Empáticas</li>
+      <li><strong>C:</strong> Calendarizadas</li>
+      <li><strong>E:</strong> Enfocadas</li>
+      <li><strong>R:</strong> Retadoras</li>
     </ul>
 
-    <p><strong>Acciones planteadas:</strong></p>
+    <p class="etapa">Mis acciones</p>
     <ul>
-      <li>Mejorar inglés (no realista en ese momento)</li>
-      <li>Controlar nervios en exámenes (no realista)</li>
       <li>Levantar la mano en clase</li>
-      <li>Dormir mínimo 7 horas</li>
+      <li>Dormir 7 horas</li>
       <li>Hacer tareas a tiempo</li>
-      <li>Aprobar todas las asignaturas</li>
+      <li>Aprobar todo</li>
+      <li>Intentar mejorar inglés</li>
+      <li>Controlar nervios</li>
     </ul>
 
-    <p><strong>Aprendizajes:</strong></p>
+    <p class="etapa">Lo aprendido</p>
     <ul>
-      <li>Importancia de objetivos realistas</li>
-      <li>La constancia es clave</li>
-      <li>Pequeños cambios generan mejoras</li>
+      <li>No todo es realista al principio</li>
+      <li>El cambio requiere constancia</li>
+      <li>Pequeños pasos → grandes mejoras</li>
     </ul>
 
   </div>
 </section>
 
 <!-- PROYECTO -->
-<section id="proyecto">
-  <h2>Proyecto transversal</h2>
+<section id="prueba">
+  <h2>⚔️ La prueba: salir de mi zona de confort</h2>
   <div class="box">
 
     <ul>
-      <li><strong>Proyecto:</strong> baldosas que se iluminan al pisarlas</li>
-      <li>Trabajo con ingenieros y personal de la universidad</li>
-      <li>Gestión de financiación</li>
-      <li><strong>Reto personal:</strong> hablar con desconocidos</li>
-      <li>Aprendizaje de electrónica (soldadura, componentes)</li>
-      <li><strong>Problema:</strong> falta de implicación del equipo</li>
-      <li>Trabajo asumido por pocos miembros</li>
-      <li>Aprendizaje sobre responsabilidad en equipo</li>
-      <li>Dificultad de pasar de teoría a práctica</li>
-      <li>Aplicación del don en el prototipo</li>
+      <li>Proyecto: baldosas con luz</li>
+      <li>Aprendizaje de electrónica</li>
+      <li>Hablar con desconocidos</li>
+      <li>Trabajo con profesionales</li>
+      <li>Problemas de equipo</li>
+      <li>Responsabilidad individual</li>
+      <li>Diferencia entre teoría y práctica</li>
     </ul>
 
   </div>
 </section>
 
 <!-- CONCLUSIÓN -->
-<section id="conclusion">
-  <h2>Conclusión</h2>
+<section id="final">
+  <h2>🏁 Destino (por ahora)</h2>
   <div class="box">
 
     <ul>
-      <li>Proceso de mentoría muy valioso</li>
       <li>Mayor autoconocimiento</li>
-      <li>Identificación de fortalezas y debilidades</li>
-      <li>Definición de objetivos realistas</li>
-      <li>Desarrollo de habilidades:
-        <ul>
-          <li>Comunicación</li>
-          <li>Trabajo en equipo</li>
-        </ul>
-      </li>
-      <li>Crecimiento personal y académico</li>
+      <li>Mejor actitud académica</li>
+      <li>Desarrollo personal</li>
+      <li>Más confianza</li>
     </ul>
 
-    <p><strong>Idea clave:</strong></p>
-    <p><strong>“No basta con entender, hay que aplicar en la vida diaria.”</strong></p>
+    <p class="etapa">Lo más importante:</p>
+    <p><strong>No basta con entender, hay que aplicarlo en la vida.</strong></p>
 
   </div>
 </section>
