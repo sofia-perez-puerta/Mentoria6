@@ -23,7 +23,7 @@
     }
 
     nav a {
-      margin: 0 10px;
+      margin: 0 12px;
       text-decoration: none;
       color: #2f5d50;
       font-weight: bold;
@@ -56,6 +56,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 15px;
+      margin-top: 15px;
     }
 
     .card {
@@ -74,19 +75,6 @@
       text-decoration: none;
     }
 
-    .antes-despues {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-
-    .col {
-      flex: 1;
-      background: #ffffff;
-      padding: 15px;
-      border-radius: 10px;
-    }
-
     ul {
       padding-left: 20px;
     }
@@ -98,6 +86,12 @@
     strong {
       color: #1e3f35;
     }
+
+    @media (max-width: 768px) {
+      .dafo {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 </head>
 
@@ -106,12 +100,10 @@
 <header>
   <nav>
     <a href="#inicio">Inicio</a>
-    <a href="#sobre">Sobre mí</a>
     <a href="#introduccion">Introducción</a>
-    <a href="#dafo">DAFO</a>
+    <a href="#desarrollo">Desarrollo</a>
     <a href="#crecer">CRECER</a>
     <a href="#proyecto">Proyecto</a>
-    <a href="#evolucion">Evolución</a>
     <a href="#conclusion">Conclusión</a>
   </nav>
 </header>
@@ -120,20 +112,7 @@
 <section id="inicio" class="hero">
   <h1>Mi proceso de crecimiento</h1>
   <p>Mentoría · Autoconocimiento · Mejora personal</p>
-  <a href="#sobre" class="btn">Ver mi proceso</a>
-</section>
-
-<!-- SOBRE MI -->
-<section id="sobre">
-  <h2>Sobre mí</h2>
-  <div class="box">
-    <ul>
-      <li><strong>Nombre:</strong> Sofía Pérez</li>
-      <li><strong>Estudios:</strong> Ingeniería Informática</li>
-      <li><strong>Intereses:</strong> creatividad, programación</li>
-      <li><strong>Don:</strong> crear y construir (manual + técnico)</li>
-    </ul>
-  </div>
+  <a href="#introduccion" class="btn">Empezar</a>
 </section>
 
 <!-- INTRODUCCIÓN -->
@@ -143,46 +122,58 @@
     <ul>
       <li>Experiencia en mentoría</li>
       <li>Aplicación en vida académica y personal</li>
-      <li>Herramientas usadas: DAFO + CRECER</li>
+      <li>Herramientas: <strong>DAFO + CRECER</strong></li>
+      <li>Reflexión personal sobre el crecimiento</li>
     </ul>
   </div>
 </section>
 
-<!-- DAFO -->
-<section id="dafo">
-  <h2>Análisis DAFO</h2>
-  <div class="dafo">
-    <div class="card">
-      <h3>💪 Fortalezas</h3>
-      <ul>
-        <li>Fuerza de voluntad</li>
-        <li>Empatía</li>
-        <li>Creatividad</li>
-      </ul>
-    </div>
+<!-- DESARROLLO -->
+<section id="desarrollo">
+  <h2>Desarrollo</h2>
+  <div class="box">
+    <ul>
+      <li><strong>Autoconocimiento:</strong> análisis DAFO</li>
+      <li>Mejor comprensión de fortalezas y debilidades</li>
+      <li>Relación entre debilidades y amenazas</li>
+      <li><strong>Don personal:</strong> crear (manual + técnico)</li>
+      <li>Importancia de ayudar en equipo</li>
+      <li>Reflexión sobre el futuro (videojuegos)</li>
+    </ul>
 
-    <div class="card">
-      <h3>⚠️ Debilidades</h3>
-      <ul>
-        <li>Dislexia</li>
-        <li>Timidez</li>
-        <li>Perfeccionismo</li>
-      </ul>
-    </div>
+    <div class="dafo">
+      <div class="card">
+        <strong>💪 Fortalezas</strong>
+        <ul>
+          <li>Voluntad</li>
+          <li>Empatía</li>
+          <li>Creatividad</li>
+        </ul>
+      </div>
 
-    <div class="card">
-      <h3>🌱 Oportunidades</h3>
-      <ul>
-        <li>Universidad</li>
-      </ul>
-    </div>
+      <div class="card">
+        <strong>⚠️ Debilidades</strong>
+        <ul>
+          <li>Dislexia</li>
+          <li>Timidez</li>
+          <li>Perfeccionismo</li>
+        </ul>
+      </div>
 
-    <div class="card">
-      <h3>🚧 Amenazas</h3>
-      <ul>
-        <li>Mala gestión del tiempo</li>
-        <li>Dificultad para expresarme</li>
-      </ul>
+      <div class="card">
+        <strong>🌱 Oportunidades</strong>
+        <ul>
+          <li>Universidad</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <strong>🚧 Amenazas</strong>
+        <ul>
+          <li>Mala gestión del tiempo</li>
+          <li>Dificultad para expresarme</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -192,12 +183,19 @@
   <h2>Acciones CRECER</h2>
   <div class="box">
     <ul>
-      <li><strong>Concretas:</strong> levantar la mano</li>
-      <li><strong>Realistas:</strong> objetivos alcanzables</li>
-      <li><strong>Empáticas:</strong> ayudar a otros</li>
-      <li><strong>Calendarizadas:</strong> organización diaria</li>
-      <li><strong>Enfocadas:</strong> prioridades claras</li>
-      <li><strong>Retadoras:</strong> salir de la zona de confort</li>
+      <li><strong>C:</strong> Concretas → levantar la mano</li>
+      <li><strong>R:</strong> Realistas → objetivos alcanzables</li>
+      <li><strong>E:</strong> Empáticas → ayudar a otros</li>
+      <li><strong>C:</strong> Calendarizadas → organización diaria</li>
+      <li><strong>E:</strong> Enfocadas → prioridades claras</li>
+      <li><strong>R:</strong> Retadoras → salir de la zona de confort</li>
+    </ul>
+
+    <p><strong>Ejemplos:</strong></p>
+    <ul>
+      <li>Participar en clase</li>
+      <li>Entregar tareas a tiempo</li>
+      <li>Mejorar hábitos</li>
     </ul>
   </div>
 </section>
@@ -207,36 +205,13 @@
   <h2>Proyecto transversal</h2>
   <div class="box">
     <ul>
-      <li><strong>Proyecto:</strong> baldosas con luz</li>
-      <li><strong>Aprendizaje:</strong> electrónica</li>
+      <li><strong>Proyecto:</strong> baldosas que se iluminan</li>
+      <li><strong>Aprendizaje:</strong> electrónica y práctica real</li>
       <li><strong>Reto:</strong> hablar con desconocidos</li>
-      <li><strong>Problema:</strong> poco trabajo en equipo</li>
-      <li><strong>Resultado:</strong> crecimiento personal</li>
+      <li><strong>Dificultad:</strong> poco compromiso del equipo</li>
+      <li><strong>Resultado:</strong> salir de la zona de confort</li>
+      <li>Aplicación del don en el prototipo</li>
     </ul>
-  </div>
-</section>
-
-<!-- EVOLUCIÓN -->
-<section id="evolucion">
-  <h2>Evolución</h2>
-  <div class="antes-despues">
-    <div class="col">
-      <h3>Antes</h3>
-      <ul>
-        <li>Timidez</li>
-        <li>No participar</li>
-        <li>Poca organización</li>
-      </ul>
-    </div>
-
-    <div class="col">
-      <h3>Después</h3>
-      <ul>
-        <li>Más confianza</li>
-        <li>Participación en clase</li>
-        <li>Mejor organización</li>
-      </ul>
-    </div>
   </div>
 </section>
 
@@ -247,8 +222,11 @@
     <ul>
       <li>Mayor autoconocimiento</li>
       <li>Mejora personal y académica</li>
-      <li><strong>Clave:</strong> aplicar lo aprendido</li>
+      <li>Desarrollo de habilidades (comunicación, equipo)</li>
+      <li><strong>Idea clave:</strong> aplicar lo aprendido</li>
     </ul>
+
+    <p><strong>“No basta con entender, hay que aplicar.”</strong></p>
   </div>
 </section>
 
