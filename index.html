@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f1ea; /* beige claro */
+      background: #f4f1ea;
       color: #2f3e34;
     }
 
@@ -27,11 +27,6 @@
       text-decoration: none;
       color: #2f5d50;
       font-weight: bold;
-      transition: 0.3s;
-    }
-
-    nav a:hover {
-      color: #1e3f35;
     }
 
     section {
@@ -77,12 +72,6 @@
       padding: 12px 22px;
       border-radius: 8px;
       text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .btn:hover {
-      background: #1e3f35;
-      transform: scale(1.05);
     }
 
     .antes-despues {
@@ -96,7 +85,6 @@
       background: #ffffff;
       padding: 15px;
       border-radius: 10px;
-      box-shadow: 0 5px 12px rgba(0,0,0,0.08);
     }
 
     ul {
@@ -107,10 +95,8 @@
       margin-bottom: 8px;
     }
 
-    @media (max-width: 768px) {
-      .dafo {
-        grid-template-columns: 1fr;
-      }
+    strong {
+      color: #1e3f35;
     }
   </style>
 </head>
@@ -133,17 +119,20 @@
 <!-- HOME -->
 <section id="inicio" class="hero">
   <h1>Mi proceso de crecimiento</h1>
-  <p>Un recorrido por mi experiencia en mentoría y cómo he evolucionado.</p>
-  <a href="#sobre" class="btn">Empezar</a>
+  <p>Mentoría · Autoconocimiento · Mejora personal</p>
+  <a href="#sobre" class="btn">Ver mi proceso</a>
 </section>
 
 <!-- SOBRE MI -->
 <section id="sobre">
   <h2>Sobre mí</h2>
   <div class="box">
-    <p>Soy Sofía Pérez, estudiante de Ingeniería Informática.</p>
-    <p>Me gusta crear cosas con las manos, como dibujar o tejer, pero también programar y construir proyectos.</p>
-    <p>Mi don es crear y dar forma a ideas.</p>
+    <ul>
+      <li><strong>Nombre:</strong> Sofía Pérez</li>
+      <li><strong>Estudios:</strong> Ingeniería Informática</li>
+      <li><strong>Intereses:</strong> creatividad, programación</li>
+      <li><strong>Don:</strong> crear y construir (manual + técnico)</li>
+    </ul>
   </div>
 </section>
 
@@ -151,7 +140,11 @@
 <section id="introduccion">
   <h2>Introducción</h2>
   <div class="box">
-    <p>En esta web explico mi experiencia en mentoría y cómo he aplicado lo aprendido en mi vida académica y personal.</p>
+    <ul>
+      <li>Experiencia en mentoría</li>
+      <li>Aplicación en vida académica y personal</li>
+      <li>Herramientas usadas: DAFO + CRECER</li>
+    </ul>
   </div>
 </section>
 
@@ -161,19 +154,35 @@
   <div class="dafo">
     <div class="card">
       <h3>💪 Fortalezas</h3>
-      <p>Fuerza de voluntad, empatía, creatividad</p>
+      <ul>
+        <li>Fuerza de voluntad</li>
+        <li>Empatía</li>
+        <li>Creatividad</li>
+      </ul>
     </div>
+
     <div class="card">
       <h3>⚠️ Debilidades</h3>
-      <p>Dislexia, timidez, perfeccionismo</p>
+      <ul>
+        <li>Dislexia</li>
+        <li>Timidez</li>
+        <li>Perfeccionismo</li>
+      </ul>
     </div>
+
     <div class="card">
       <h3>🌱 Oportunidades</h3>
-      <p>La universidad</p>
+      <ul>
+        <li>Universidad</li>
+      </ul>
     </div>
+
     <div class="card">
       <h3>🚧 Amenazas</h3>
-      <p>Gestión del tiempo, dificultad para expresarme</p>
+      <ul>
+        <li>Mala gestión del tiempo</li>
+        <li>Dificultad para expresarme</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -183,10 +192,12 @@
   <h2>Acciones CRECER</h2>
   <div class="box">
     <ul>
-      <li>Levantar la mano en clase</li>
-      <li>Organizar mejor mi tiempo</li>
-      <li>Dormir al menos 7 horas</li>
-      <li>Entregar tareas a tiempo</li>
+      <li><strong>Concretas:</strong> levantar la mano</li>
+      <li><strong>Realistas:</strong> objetivos alcanzables</li>
+      <li><strong>Empáticas:</strong> ayudar a otros</li>
+      <li><strong>Calendarizadas:</strong> organización diaria</li>
+      <li><strong>Enfocadas:</strong> prioridades claras</li>
+      <li><strong>Retadoras:</strong> salir de la zona de confort</li>
     </ul>
   </div>
 </section>
@@ -195,22 +206,36 @@
 <section id="proyecto">
   <h2>Proyecto transversal</h2>
   <div class="box">
-    <p>Participé en un proyecto donde creamos baldosas que se iluminan al pisarlas.</p>
-    <p>Aprendí electrónica, trabajo en equipo y a salir de mi zona de confort.</p>
+    <ul>
+      <li><strong>Proyecto:</strong> baldosas con luz</li>
+      <li><strong>Aprendizaje:</strong> electrónica</li>
+      <li><strong>Reto:</strong> hablar con desconocidos</li>
+      <li><strong>Problema:</strong> poco trabajo en equipo</li>
+      <li><strong>Resultado:</strong> crecimiento personal</li>
+    </ul>
   </div>
 </section>
 
 <!-- EVOLUCIÓN -->
 <section id="evolucion">
-  <h2>Mi evolución</h2>
+  <h2>Evolución</h2>
   <div class="antes-despues">
     <div class="col">
       <h3>Antes</h3>
-      <p>No participaba en clase y era más tímida.</p>
+      <ul>
+        <li>Timidez</li>
+        <li>No participar</li>
+        <li>Poca organización</li>
+      </ul>
     </div>
+
     <div class="col">
       <h3>Después</h3>
-      <p>Participo más y tengo más confianza en mí misma.</p>
+      <ul>
+        <li>Más confianza</li>
+        <li>Participación en clase</li>
+        <li>Mejor organización</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -219,8 +244,11 @@
 <section id="conclusion">
   <h2>Conclusión</h2>
   <div class="box">
-    <p>Este proceso me ha ayudado a conocerme mejor y a crecer como persona.</p>
-    <p><strong>No basta con entender, hay que aplicar.</strong></p>
+    <ul>
+      <li>Mayor autoconocimiento</li>
+      <li>Mejora personal y académica</li>
+      <li><strong>Clave:</strong> aplicar lo aprendido</li>
+    </ul>
   </div>
 </section>
 
