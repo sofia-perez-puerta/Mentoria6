@@ -6,266 +6,409 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #f4f1ea;
-      color: #2f3e34;
-      scroll-behavior: smooth;
+      background: linear-gradient(to bottom, #f6f1e7, #edf5ea);
+      color: #2d3b2f;
     }
 
     header {
       position: fixed;
+      top: 0;
       width: 100%;
-      background: #e8efe6;
-      padding: 15px;
+      background: linear-gradient(90deg, #6c9a7d, #b8c9a3);
+      padding: 16px 10px;
       text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
       z-index: 1000;
     }
 
     nav a {
-      margin: 0 12px;
+      color: white;
       text-decoration: none;
-      color: #2f5d50;
+      margin: 0 10px;
       font-weight: bold;
+      font-size: 15px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
 
     section {
-      padding: 120px 20px 80px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-    }
-
-    h1, h2 {
-      color: #2f5d50;
+      padding: 120px 20px 70px;
     }
 
     .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding-top: 160px;
+      background:
+        linear-gradient(rgba(32, 56, 40, 0.45), rgba(32, 56, 40, 0.45)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      color: white;
+      padding-top: 140px;
     }
 
-    .box {
-      background: #ffffff;
-      padding: 25px;
-      margin-top: 20px;
-      border-radius: 12px;
-      box-shadow: 0 5px 12px rgba(0,0,0,0.08);
+    .hero-box {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 35px;
+      border-radius: 20px;
+      max-width: 700px;
     }
 
-    .etapa {
+    h1 {
+      font-size: 52px;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #3d6b4f;
+      font-size: 34px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      margin-top: 0;
+      color: #476d52;
+    }
+
+    .subtitulo {
+      font-size: 20px;
       margin-bottom: 20px;
-      font-weight: bold;
-      color: #1e3f35;
-    }
-
-    .dafo {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 15px;
-      margin-top: 15px;
-    }
-
-    .card {
-      padding: 15px;
-      border-radius: 10px;
-      background: #e8efe6;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 20px;
-      background: #2f5d50;
-      color: white;
-      padding: 12px 22px;
-      border-radius: 8px;
+      margin-top: 18px;
+      padding: 14px 26px;
+      background: #d9b66f;
+      color: #2f372b;
       text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .btn:hover {
+      background: #e6c784;
+      transform: scale(1.04);
+    }
+
+    .box {
+      background: #fffdf8;
+      border-left: 8px solid #93b28f;
+      border-radius: 18px;
+      padding: 26px;
+      margin-top: 20px;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+    }
+
+    .etapa {
+      font-weight: bold;
+      color: #5b7c5a;
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .contenido-con-imagen {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .contenido-con-imagen img,
+    .imagen-grande {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      object-fit: cover;
+    }
+
+    .imagen-grande {
+      max-height: 330px;
     }
 
     ul {
-      padding-left: 20px;
+      padding-left: 22px;
+      line-height: 1.6;
     }
 
     li {
       margin-bottom: 8px;
     }
 
-    @media (max-width: 768px) {
+    .dafo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .card {
+      border-radius: 16px;
+      padding: 18px;
+      color: #253128;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .fortalezas { background: #dff3e3; }
+    .debilidades { background: #f8e0d8; }
+    .oportunidades { background: #efe8c8; }
+    .amenazas { background: #eadff3; }
+
+    .frase-final {
+      margin-top: 18px;
+      padding: 18px;
+      background: linear-gradient(90deg, #799f7f, #d7c089);
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      border-radius: 16px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      background: #5d8065;
+      color: white;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 850px) {
+      .contenido-con-imagen {
+        grid-template-columns: 1fr;
+      }
+
       .dafo {
         grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 38px;
+      }
+
+      h2 {
+        font-size: 28px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 6px 8px;
       }
     }
   </style>
 </head>
-
 <body>
 
-<header>
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#inicio-viaje">Inicio del viaje</a>
-    <a href="#mapa">Mapa</a>
-    <a href="#herramientas">Herramientas</a>
-    <a href="#prueba">Prueba</a>
-    <a href="#final">Destino</a>
-  </nav>
-</header>
+  <header>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#inicio-viaje">Inicio del viaje</a>
+      <a href="#mapa">Mapa</a>
+      <a href="#herramientas">Herramientas</a>
+      <a href="#prueba">Prueba</a>
+      <a href="#final">Destino</a>
+    </nav>
+  </header>
 
-<!-- HOME -->
-<section id="inicio" class="hero">
-  <h1>Mi viaje de crecimiento</h1>
-  <p>De la duda al autoconocimiento</p>
-  <a href="#inicio-viaje" class="btn">Comenzar viaje</a>
-</section>
+  <section id="inicio" class="hero">
+    <div class="hero-box">
+      <h1>Mi viaje de crecimiento</h1>
+      <p class="subtitulo">De la duda al autoconocimiento</p>
+      <p>Una historia sobre mentoría, aprendizaje, retos y crecimiento personal.</p>
+      <a href="#inicio-viaje" class="btn">Comenzar viaje</a>
+    </div>
+  </section>
 
-<!-- INTRO -->
-<section id="inicio-viaje">
-  <h2>🌱 Inicio del viaje</h2>
-  <div class="box">
-    <p class="etapa">Antes de empezar...</p>
-    <ul>
-      <li>No analizaba mis fortalezas ni debilidades</li>
-      <li>No reflexionaba sobre mis acciones</li>
-      <li>No tenía claro cómo mejorar</li>
-    </ul>
-
-    <p class="etapa">Durante la mentoría descubrí:</p>
-    <ul>
-      <li>La importancia del autoconocimiento</li>
-      <li>Herramientas como DAFO y CRECER</li>
-      <li>La necesidad de aplicar lo aprendido</li>
-    </ul>
-  </div>
-</section>
-
-<!-- DESARROLLO -->
-<section id="mapa">
-  <h2>🗺️ El mapa: conocerme a mí misma</h2>
-  <div class="box">
-
-    <p class="etapa">Descubrimiento personal</p>
-    <ul>
-      <li>Mayor conciencia de mí misma</li>
-      <li>Relación entre debilidades y problemas</li>
-      <li>Importancia de la opinión de otros</li>
-    </ul>
-
-    <div class="dafo">
-      <div class="card">
-        <strong>💪 Fortalezas</strong>
+  <section id="inicio-viaje">
+    <h2>🌱 Inicio del viaje</h2>
+    <div class="box contenido-con-imagen">
+      <div>
+        <p class="etapa">Antes de empezar...</p>
         <ul>
-          <li>Fuerza de voluntad</li>
-          <li>Empatía</li>
-          <li>Creatividad</li>
+          <li>No analizaba mis fortalezas ni debilidades.</li>
+          <li>No solía reflexionar sobre cómo mejorar.</li>
+          <li>No tenía una visión clara de mi crecimiento personal.</li>
+        </ul>
+
+        <p class="etapa">Durante la mentoría descubrí...</p>
+        <ul>
+          <li>La importancia del autoconocimiento.</li>
+          <li>Herramientas como el DAFO y el modelo CRECER.</li>
+          <li>Que crecer no es solo entender, sino también aplicar.</li>
         </ul>
       </div>
 
-      <div class="card">
-        <strong>⚠️ Debilidades</strong>
-        <ul>
-          <li>Dislexia</li>
-          <li>Timidez</li>
-          <li>Perfeccionismo</li>
-        </ul>
+      <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=900&q=80" alt="Comienzo del viaje">
+    </div>
+  </section>
+
+  <section id="mapa">
+    <h2>🗺️ El mapa: conocerme a mí misma</h2>
+
+    <div class="box">
+      <div class="contenido-con-imagen">
+        <div>
+          <p class="etapa">Descubrimiento personal</p>
+          <ul>
+            <li>Ahora soy más consciente de mis fortalezas y debilidades.</li>
+            <li>Entiendo mejor la relación entre mis dificultades y mis amenazas.</li>
+            <li>También me ayudó ver cómo me perciben otras personas.</li>
+          </ul>
+
+          <p class="etapa">Mi don</p>
+          <ul>
+            <li>Crear cosas con las manos.</li>
+            <li>Me gusta dibujar, tejer, programar y construir.</li>
+            <li>Me identifico con un perfil artesano: dedicar tiempo, esfuerzo y detalle.</li>
+            <li>También puedo ayudar a otros dando forma y estructura a sus ideas.</li>
+            <li>Esto me hace pensar en una vocación futura relacionada con el desarrollo de videojuegos.</li>
+          </ul>
+        </div>
+
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80" alt="Autoconocimiento y creatividad">
       </div>
 
-      <div class="card">
-        <strong>🌱 Oportunidades</strong>
-        <ul>
-          <li>Universidad</li>
-        </ul>
-      </div>
+      <div class="dafo">
+        <div class="card fortalezas">
+          <h3>💪 Fortalezas</h3>
+          <ul>
+            <li>Fuerza de voluntad</li>
+            <li>Temperamento</li>
+            <li>Empatía</li>
+            <li>Creatividad</li>
+          </ul>
+        </div>
 
-      <div class="card">
-        <strong>🚧 Amenazas</strong>
-        <ul>
-          <li>Mala gestión del tiempo</li>
-          <li>Dificultad para expresarme</li>
-        </ul>
+        <div class="card debilidades">
+          <h3>⚠️ Debilidades</h3>
+          <ul>
+            <li>Dislexia</li>
+            <li>Timidez</li>
+            <li>Perfeccionismo</li>
+            <li>Autoexigencia</li>
+          </ul>
+        </div>
+
+        <div class="card oportunidades">
+          <h3>🌱 Oportunidades</h3>
+          <ul>
+            <li>La universidad</li>
+          </ul>
+        </div>
+
+        <div class="card amenazas">
+          <h3>🚧 Amenazas</h3>
+          <ul>
+            <li>La gestión del tiempo</li>
+            <li>La tendencia a cerrarme o no expresar lo que siento</li>
+          </ul>
+        </div>
       </div>
     </div>
+  </section>
 
-    <p class="etapa">Mi don</p>
-    <ul>
-      <li>Crear cosas (manual y técnico)</li>
-      <li>Dibujar, tejer, programar</li>
-      <li>Perfil tipo artesano</li>
-      <li>Ayudar en equipo dando forma a ideas</li>
-    </ul>
+  <section id="herramientas">
+    <h2>🛠️ Las herramientas del viaje</h2>
+    <div class="box contenido-con-imagen">
+      <div>
+        <p class="etapa">Modelo C.R.E.C.E.R.</p>
+        <ul>
+          <li><strong>C - Concretas:</strong> precisas.</li>
+          <li><strong>R - Realistas:</strong> al alcance de uno mismo.</li>
+          <li><strong>E - Empáticas:</strong> con efecto positivo en los demás.</li>
+          <li><strong>C - Calendarizadas:</strong> con un tiempo definido.</li>
+          <li><strong>E - Enfocadas:</strong> valiosas e importantes.</li>
+          <li><strong>R - Retadoras:</strong> ayudan a superarse.</li>
+        </ul>
 
-  </div>
-</section>
+        <p class="etapa">Mis acciones</p>
+        <ul>
+          <li>Mejorar mi inglés.</li>
+          <li>Levantar la mano en clase.</li>
+          <li>Dormir al menos 7 horas cada noche.</li>
+          <li>Calmarme durante los exámenes.</li>
+          <li>Hacer todas mis tareas a tiempo.</li>
+          <li>Aprobar todas las materias.</li>
+        </ul>
 
-<!-- CRECER -->
-<section id="herramientas">
-  <h2>🛠️ Las herramientas del viaje (CRECER)</h2>
-  <div class="box">
+        <p class="etapa">Lo que aprendí</p>
+        <ul>
+          <li>Algunas metas no eran realistas en ese momento, como mejorar el inglés o controlar los nervios en exámenes.</li>
+          <li>Levantar la mano en clase me ayudó a reducir mi timidez y ganar confianza.</li>
+          <li>Mantener todo al día me permitió organizarme mejor y sentirme más tranquila.</li>
+          <li>El cambio requiere constancia y esfuerzo.</li>
+        </ul>
+      </div>
 
-    <ul>
-      <li><strong>C:</strong> Concretas</li>
-      <li><strong>R:</strong> Realistas</li>
-      <li><strong>E:</strong> Empáticas</li>
-      <li><strong>C:</strong> Calendarizadas</li>
-      <li><strong>E:</strong> Enfocadas</li>
-      <li><strong>R:</strong> Retadoras</li>
-    </ul>
+      <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=900&q=80" alt="Herramientas y planificación">
+    </div>
+  </section>
 
-    <p class="etapa">Mis acciones</p>
-    <ul>
-      <li>Levantar la mano en clase</li>
-      <li>Dormir 7 horas</li>
-      <li>Hacer tareas a tiempo</li>
-      <li>Aprobar todo</li>
-      <li>Intentar mejorar inglés</li>
-      <li>Controlar nervios</li>
-    </ul>
+  <section id="prueba">
+    <h2>⚔️ La prueba: salir de mi zona de confort</h2>
+    <div class="box contenido-con-imagen">
+      <div>
+        <p class="etapa">Proyecto transversal</p>
+        <ul>
+          <li>El proyecto consistía en crear baldosas que se iluminaran al pisarlas.</li>
+          <li>Fue un reto porque tuve que hablar con personas desconocidas de la universidad.</li>
+          <li>También tuve que aprender sobre electrónica.</li>
+          <li>Aprendí a usar una soldadora y a entender componentes electrónicos.</li>
+          <li>Aunque éramos seis personas, al final solo trabajamos realmente mi compañero y yo.</li>
+          <li>Eso me enseñó el valor de la responsabilidad dentro de un equipo.</li>
+          <li>También entendí que una cosa es comprender la teoría y otra muy distinta ponerla en práctica.</li>
+          <li>En este proyecto pude aplicar mi don al construir el prototipo.</li>
+        </ul>
+      </div>
 
-    <p class="etapa">Lo aprendido</p>
-    <ul>
-      <li>No todo es realista al principio</li>
-      <li>El cambio requiere constancia</li>
-      <li>Pequeños pasos → grandes mejoras</li>
-    </ul>
+      <img src="https://images.unsplash.com/photo-1581092921461-eab62e97a780?auto=format&fit=crop&w=900&q=80" alt="Proyecto y reto personal">
+    </div>
+  </section>
 
-  </div>
-</section>
+  <section id="final">
+    <h2>🏁 Destino (por ahora)</h2>
+    <div class="box">
+      <img class="imagen-grande" src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=1200&q=80" alt="Destino del viaje">
 
-<!-- PROYECTO -->
-<section id="prueba">
-  <h2>⚔️ La prueba: salir de mi zona de confort</h2>
-  <div class="box">
+      <p class="etapa" style="margin-top:20px;">Lo que me llevo de este viaje</p>
+      <ul>
+        <li>La mentoría ha sido muy valiosa en mi primer año universitario.</li>
+        <li>Me ha ayudado a reflexionar sobre mí misma y sobre cómo actúo.</li>
+        <li>He podido identificar mis fortalezas y debilidades.</li>
+        <li>He aprendido a fijar objetivos más realistas.</li>
+        <li>He desarrollado habilidades como la comunicación y el trabajo en equipo.</li>
+        <li>Aunque aún tengo cosas que mejorar, siento que he empezado a crecer como persona y como estudiante.</li>
+      </ul>
 
-    <ul>
-      <li>Proyecto: baldosas con luz</li>
-      <li>Aprendizaje de electrónica</li>
-      <li>Hablar con desconocidos</li>
-      <li>Trabajo con profesionales</li>
-      <li>Problemas de equipo</li>
-      <li>Responsabilidad individual</li>
-      <li>Diferencia entre teoría y práctica</li>
-    </ul>
+      <div class="frase-final">
+        No basta con entender las cosas, también hay que aplicarlas en la vida diaria.
+      </div>
+    </div>
+  </section>
 
-  </div>
-</section>
-
-<!-- CONCLUSIÓN -->
-<section id="final">
-  <h2>🏁 Destino (por ahora)</h2>
-  <div class="box">
-
-    <ul>
-      <li>Mayor autoconocimiento</li>
-      <li>Mejor actitud académica</li>
-      <li>Desarrollo personal</li>
-      <li>Más confianza</li>
-    </ul>
-
-    <p class="etapa">Lo más importante:</p>
-    <p><strong>No basta con entender, hay que aplicarlo en la vida.</strong></p>
-
-  </div>
-</section>
+  <footer>
+    Mi viaje de crecimiento · Mentoría
+  </footer>
 
 </body>
 </html>
