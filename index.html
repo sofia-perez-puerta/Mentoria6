@@ -16,38 +16,63 @@
 
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to bottom, #f6f1e7, #edf5ea);
-      color: #2d3b2f;
+      font-family: "Courier New", monospace;
+      background:
+        radial-gradient(circle at top, #1e293b 0%, #0f172a 40%, #020617 100%);
+      color: #e2e8f0;
     }
 
     header {
       position: fixed;
       top: 0;
       width: 100%;
-      background: linear-gradient(90deg, #6c9a7d, #b8c9a3);
+      background: rgba(2, 6, 23, 0.92);
+      border-bottom: 2px solid #22c55e;
       padding: 16px 10px;
       text-align: center;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+      box-shadow: 0 0 18px rgba(34, 197, 94, 0.35);
       z-index: 1000;
+      backdrop-filter: blur(6px);
     }
 
     nav a {
-      color: white;
+      color: #22c55e;
       text-decoration: none;
       margin: 0 10px;
       font-weight: bold;
       font-size: 15px;
+      text-shadow: 0 0 6px rgba(34, 197, 94, 0.6);
+      transition: 0.2s;
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #86efac;
+      text-shadow: 0 0 12px rgba(134, 239, 172, 0.9);
+    }
+
+    .barra {
+      width: 100%;
+      height: 8px;
+      background: #111827;
+      position: fixed;
+      top: 61px;
+      left: 0;
+      z-index: 999;
+      border-bottom: 1px solid rgba(34, 197, 94, 0.3);
+    }
+
+    .progreso {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, #22c55e, #86efac);
+      box-shadow: 0 0 12px #22c55e;
+      transition: width 0.1s linear;
     }
 
     section {
       max-width: 1000px;
       margin: auto;
-      padding: 120px 20px 70px;
+      padding: 130px 20px 70px;
     }
 
     .hero {
@@ -57,73 +82,84 @@
       justify-content: center;
       text-align: center;
       background:
-        linear-gradient(rgba(32, 56, 40, 0.45), rgba(32, 56, 40, 0.45)),
+        linear-gradient(rgba(2, 6, 23, 0.72), rgba(2, 6, 23, 0.85)),
         url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-      color: white;
-      padding-top: 140px;
+      color: #e2e8f0;
+      padding-top: 150px;
     }
 
     .hero-box {
-      background: rgba(255,255,255,0.12);
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(15, 23, 42, 0.72);
+      border: 2px solid #22c55e;
       padding: 35px;
       border-radius: 20px;
       max-width: 700px;
+      box-shadow: 0 0 25px rgba(34, 197, 94, 0.35);
     }
 
     h1 {
       font-size: 52px;
       margin-bottom: 15px;
+      color: #86efac;
+      text-shadow: 0 0 16px rgba(34, 197, 94, 0.65);
     }
 
     h2 {
-      color: #3d6b4f;
+      color: #22c55e;
       font-size: 34px;
       margin-bottom: 10px;
+      text-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
     }
 
     h3 {
       margin-top: 0;
-      color: #476d52;
+      color: #86efac;
     }
 
     .subtitulo {
       font-size: 20px;
       margin-bottom: 20px;
+      color: #cbd5e1;
     }
 
     .btn {
       display: inline-block;
       margin-top: 18px;
       padding: 14px 26px;
-      background: #d9b66f;
-      color: #2f372b;
+      background: #020617;
+      color: #22c55e;
       text-decoration: none;
       border-radius: 12px;
       font-weight: bold;
-      transition: transform 0.2s, background 0.2s;
+      border: 2px solid #22c55e;
+      box-shadow: 0 0 14px rgba(34, 197, 94, 0.25);
+      transition: transform 0.2s, background 0.2s, color 0.2s, box-shadow 0.2s;
     }
 
     .btn:hover {
-      background: #e6c784;
+      background: #22c55e;
+      color: #020617;
       transform: scale(1.04);
+      box-shadow: 0 0 18px rgba(34, 197, 94, 0.8);
     }
 
     .box {
-      background: #fffdf8;
-      border-left: 8px solid #93b28f;
+      background: rgba(15, 23, 42, 0.86);
+      border: 1px solid #22c55e;
+      border-left: 8px solid #22c55e;
       border-radius: 18px;
       padding: 26px;
       margin-top: 20px;
-      box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+      box-shadow: 0 0 18px rgba(34, 197, 94, 0.16);
     }
 
     .etapa {
       font-weight: bold;
-      color: #5b7c5a;
+      color: #86efac;
       margin-bottom: 12px;
       font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .contenido-con-imagen {
@@ -137,8 +173,9 @@
     .imagen-grande {
       width: 100%;
       border-radius: 18px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      box-shadow: 0 0 20px rgba(34, 197, 94, 0.22);
       object-fit: cover;
+      border: 2px solid rgba(34, 197, 94, 0.45);
     }
 
     .imagen-grande {
@@ -147,7 +184,7 @@
 
     ul {
       padding-left: 22px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
     li {
@@ -164,33 +201,38 @@
     .card {
       border-radius: 16px;
       padding: 18px;
-      color: #253128;
-      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      color: #e2e8f0;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 0 14px rgba(0,0,0,0.25);
     }
 
-    .fortalezas { background: #dff3e3; }
-    .debilidades { background: #f8e0d8; }
-    .oportunidades { background: #efe8c8; }
-    .amenazas { background: #eadff3; }
+    .fortalezas { background: rgba(34, 197, 94, 0.14); }
+    .debilidades { background: rgba(239, 68, 68, 0.14); }
+    .oportunidades { background: rgba(234, 179, 8, 0.14); }
+    .amenazas { background: rgba(168, 85, 247, 0.14); }
 
     .frase-final {
       margin-top: 18px;
       padding: 18px;
-      background: linear-gradient(90deg, #799f7f, #d7c089);
-      color: white;
+      background: #020617;
+      color: #22c55e;
       font-size: 22px;
       font-weight: bold;
       text-align: center;
       border-radius: 16px;
-      box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+      border: 2px solid #22c55e;
+      box-shadow: 0 0 18px rgba(34, 197, 94, 0.4);
+      text-shadow: 0 0 10px rgba(34, 197, 94, 0.55);
     }
 
     footer {
       text-align: center;
       padding: 35px 20px;
-      background: #5d8065;
-      color: white;
+      background: #020617;
+      color: #86efac;
       margin-top: 40px;
+      border-top: 2px solid #22c55e;
+      box-shadow: 0 0 18px rgba(34, 197, 94, 0.25);
     }
 
     @media (max-width: 850px) {
@@ -214,6 +256,10 @@
         display: inline-block;
         margin: 6px 8px;
       }
+
+      .barra {
+        top: 97px;
+      }
     }
   </style>
 </head>
@@ -221,36 +267,40 @@
 
   <header>
     <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#inicio-viaje">Inicio del viaje</a>
-      <a href="#mapa">Mapa</a>
-      <a href="#herramientas">Herramientas</a>
-      <a href="#prueba">Prueba</a>
-      <a href="#final">Destino</a>
+      <a href="#inicio">Pantalla inicial</a>
+      <a href="#inicio-viaje">Nivel 1</a>
+      <a href="#mapa">Nivel 2</a>
+      <a href="#herramientas">Nivel 3</a>
+      <a href="#prueba">Boss final</a>
+      <a href="#final">Pantalla final</a>
     </nav>
   </header>
+
+  <div class="barra">
+    <div class="progreso"></div>
+  </div>
 
   <section id="inicio" class="hero">
     <div class="hero-box">
       <h1>Mi viaje de crecimiento</h1>
-      <p class="subtitulo">De la duda al autoconocimiento</p>
-      <p>Una historia sobre mentoría, aprendizaje, retos y crecimiento personal.</p>
-      <a href="#inicio-viaje" class="btn">Comenzar viaje</a>
+      <p class="subtitulo">Partida iniciada: de la duda al autoconocimiento</p>
+      <p>Una aventura de mentoría, aprendizaje, retos y evolución personal.</p>
+      <a href="#inicio-viaje" class="btn">▶ Empezar partida</a>
     </div>
   </section>
 
   <section id="inicio-viaje">
-    <h2>🌱 Inicio del viaje</h2>
+    <h2>🎮 Nivel 1: Inicio del juego</h2>
     <div class="box contenido-con-imagen">
       <div>
-        <p class="etapa">Antes de empezar...</p>
+        <p class="etapa">Estado inicial del personaje</p>
         <ul>
           <li>No analizaba mis fortalezas ni debilidades.</li>
           <li>No solía reflexionar sobre cómo mejorar.</li>
           <li>No tenía una visión clara de mi crecimiento personal.</li>
         </ul>
 
-        <p class="etapa">Durante la mentoría descubrí...</p>
+        <p class="etapa">Tutorial desbloqueado</p>
         <ul>
           <li>La importancia del autoconocimiento.</li>
           <li>Herramientas como el DAFO y el modelo CRECER.</li>
@@ -263,7 +313,7 @@
   </section>
 
   <section id="mapa">
-    <h2>🗺️ El mapa: conocerme a mí misma</h2>
+    <h2>🗺️ Nivel 2: Mapa del personaje</h2>
 
     <div class="box">
       <div class="contenido-con-imagen">
@@ -275,7 +325,7 @@
             <li>También me ayudó ver cómo me perciben otras personas.</li>
           </ul>
 
-          <p class="etapa">Mi don</p>
+          <p class="etapa">Habilidad especial: mi don</p>
           <ul>
             <li>Crear cosas con las manos.</li>
             <li>Me gusta dibujar, tejer, programar y construir.</li>
@@ -290,7 +340,7 @@
 
       <div class="dafo">
         <div class="card fortalezas">
-          <h3>💪 Fortalezas</h3>
+          <h3>💪 Estadísticas: Fortalezas</h3>
           <ul>
             <li>Fuerza de voluntad</li>
             <li>Temperamento</li>
@@ -300,7 +350,7 @@
         </div>
 
         <div class="card debilidades">
-          <h3>⚠️ Debilidades</h3>
+          <h3>⚠️ Estadísticas: Debilidades</h3>
           <ul>
             <li>Dislexia</li>
             <li>Timidez</li>
@@ -310,14 +360,14 @@
         </div>
 
         <div class="card oportunidades">
-          <h3>🌱 Oportunidades</h3>
+          <h3>🌱 Bonus del entorno</h3>
           <ul>
             <li>La universidad</li>
           </ul>
         </div>
 
         <div class="card amenazas">
-          <h3>🚧 Amenazas</h3>
+          <h3>🚧 Obstáculos del nivel</h3>
           <ul>
             <li>La gestión del tiempo</li>
             <li>La tendencia a cerrarme o no expresar lo que siento</li>
@@ -328,10 +378,10 @@
   </section>
 
   <section id="herramientas">
-    <h2>🛠️ Las herramientas del viaje</h2>
+    <h2>🛠️ Nivel 3: Habilidades y objetos desbloqueados</h2>
     <div class="box contenido-con-imagen">
       <div>
-        <p class="etapa">Modelo C.R.E.C.E.R.</p>
+        <p class="etapa">Sistema C.R.E.C.E.R.</p>
         <ul>
           <li><strong>C - Concretas:</strong> precisas.</li>
           <li><strong>R - Realistas:</strong> al alcance de uno mismo.</li>
@@ -341,7 +391,7 @@
           <li><strong>R - Retadoras:</strong> ayudan a superarse.</li>
         </ul>
 
-        <p class="etapa">Mis acciones</p>
+        <p class="etapa">Misiones activas</p>
         <ul>
           <li>Mejorar mi inglés.</li>
           <li>Levantar la mano en clase.</li>
@@ -351,7 +401,7 @@
           <li>Aprobar todas las materias.</li>
         </ul>
 
-        <p class="etapa">Lo que aprendí</p>
+        <p class="etapa">Experiencia ganada</p>
         <ul>
           <li>Algunas metas no eran realistas en ese momento, como mejorar el inglés o controlar los nervios en exámenes.</li>
           <li>Levantar la mano en clase me ayudó a reducir mi timidez y ganar confianza.</li>
@@ -365,10 +415,10 @@
   </section>
 
   <section id="prueba">
-    <h2>⚔️ La prueba: salir de mi zona de confort</h2>
+    <h2>⚔️ Nivel 4: La prueba final</h2>
     <div class="box contenido-con-imagen">
       <div>
-        <p class="etapa">Proyecto transversal</p>
+        <p class="etapa">Misión transversal</p>
         <ul>
           <li>El proyecto consistía en crear baldosas que se iluminaran al pisarlas.</li>
           <li>Fue un reto porque tuve que hablar con personas desconocidas de la universidad.</li>
@@ -386,11 +436,11 @@
   </section>
 
   <section id="final">
-    <h2>🏁 Destino (por ahora)</h2>
+    <h2>🏁 Pantalla final: progreso actual</h2>
     <div class="box">
       <img class="imagen-grande" src="https://images.unsplash.com/photo-1502134249126-9f3755a50d78?auto=format&fit=crop&w=1200&q=80" alt="Destino del viaje">
 
-      <p class="etapa" style="margin-top:20px;">Lo que me llevo de este viaje</p>
+      <p class="etapa" style="margin-top:20px;">Logros conseguidos</p>
       <ul>
         <li>La mentoría ha sido muy valiosa en mi primer año universitario.</li>
         <li>Me ha ayudado a reflexionar sobre mí misma y sobre cómo actúo.</li>
@@ -401,14 +451,23 @@
       </ul>
 
       <div class="frase-final">
-        No basta con entender las cosas, también hay que aplicarlas en la vida diaria.
+        ✨ Mensaje desbloqueado: no basta con entender las cosas, también hay que aplicarlas en la vida diaria.
       </div>
     </div>
   </section>
 
   <footer>
-    Mi viaje de crecimiento · Mentoría
+    Mi viaje de crecimiento · Mentoría · Partida en curso
   </footer>
+
+  <script>
+    window.onscroll = function () {
+      let scroll = document.documentElement.scrollTop;
+      let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrolled = (scroll / height) * 100;
+      document.querySelector(".progreso").style.width = scrolled + "%";
+    };
+  </script>
 
 </body>
 </html>
